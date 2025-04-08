@@ -1,0 +1,44 @@
+version: "3.1"
+
+stories:
+- story: greet and goodbye
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: goodbye
+  - action: utter_goodbye
+
+- story: ask weather with city provided
+  steps:
+  - intent: ask_weather
+    entities:
+    - city: "Москва"
+  - action: action_get_weather
+
+- story: ask weather without city
+  steps:
+  - intent: ask_weather
+  - action: utter_ask_city
+  - intent: inform
+    entities:
+    - city: "Санкт-Петербург"
+  - action: action_get_weather
+
+- story: ask time
+  steps:
+  - intent: ask_time
+  - action: action_get_time
+
+- story: tell joke
+  steps:
+  - intent: tell_joke
+  - action: action_tell_joke
+
+- story: mood analysis happy path
+  steps:
+  - intent: mood_analysis
+  - action: utter_ask_mood
+  - intent: inform
+    entities:
+    - mood: "Я сегодня получил повышение на работе!"
+  - action: action_analyze_mood

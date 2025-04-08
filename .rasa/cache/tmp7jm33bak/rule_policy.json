@@ -1,0 +1,36 @@
+{
+  "lookup": {
+    "rules": {
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"ask_time\"}}]": "action_get_time",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"ask_time\"}}, {\"prev_action\": {\"action_name\": \"action_get_time\"}, \"user\": {\"intent\": \"ask_time\"}}]": "action_listen",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"tell_joke\"}}]": "action_tell_joke",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"tell_joke\"}}, {\"prev_action\": {\"action_name\": \"action_tell_joke\"}, \"user\": {\"intent\": \"tell_joke\"}}]": "action_listen",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"informs\"}}]": "action_analyze_mood",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"informs\"}}, {\"prev_action\": {\"action_name\": \"action_analyze_mood\"}, \"user\": {\"intent\": \"informs\"}}]": "action_listen",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"greet\"}}]": "utter_greet",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"greet\"}}, {\"prev_action\": {\"action_name\": \"utter_greet\"}, \"user\": {\"intent\": \"greet\"}}]": "action_listen",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"slots\": {\"city\": [1.0]}, \"user\": {\"entities\": [\"city\"], \"intent\": \"ask_weather\"}}]": "action_get_weather",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"slots\": {\"city\": [1.0]}, \"user\": {\"entities\": [\"city\"], \"intent\": \"ask_weather\"}}, {\"prev_action\": {\"action_name\": \"action_get_weather\"}, \"slots\": {\"city\": [1.0]}, \"user\": {\"entities\": [\"city\"], \"intent\": \"ask_weather\"}}]": "action_listen",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"ask_weather\"}}]": "utter_ask_city",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"ask_weather\"}}, {\"prev_action\": {\"action_name\": \"utter_ask_city\"}, \"user\": {\"intent\": \"ask_weather\"}}]": "action_listen",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"entities\": [\"mood\"], \"intent\": \"informs\"}}]": "action_analyze_mood",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"entities\": [\"mood\"], \"intent\": \"informs\"}}, {\"prev_action\": {\"action_name\": \"action_analyze_mood\"}, \"user\": {\"entities\": [\"mood\"], \"intent\": \"informs\"}}]": "action_listen",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"goodbye\"}}]": "utter_goodbye",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"goodbye\"}}, {\"prev_action\": {\"action_name\": \"utter_goodbye\"}, \"user\": {\"intent\": \"goodbye\"}}]": "action_listen",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"mood_analysis\"}}]": "utter_ask_mood",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"mood_analysis\"}}, {\"prev_action\": {\"action_name\": \"utter_ask_mood\"}, \"user\": {\"intent\": \"mood_analysis\"}}]": "action_listen"
+    },
+    "rule_only_slots": [],
+    "rule_only_loops": [],
+    "rules_for_loop_unhappy_path": {},
+    "rules_not_in_stories": [
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"entities\": [\"mood\"], \"intent\": \"informs\"}}]",
+      "predicting default action with intent restart",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"entities\": [\"mood\"], \"intent\": \"informs\"}}, {\"prev_action\": {\"action_name\": \"action_analyze_mood\"}, \"user\": {\"entities\": [\"mood\"], \"intent\": \"informs\"}}]",
+      "predicting default action with intent session_start",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"informs\"}}, {\"prev_action\": {\"action_name\": \"action_analyze_mood\"}, \"user\": {\"intent\": \"informs\"}}]",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"informs\"}}]",
+      "predicting default action with intent back"
+    ]
+  }
+}

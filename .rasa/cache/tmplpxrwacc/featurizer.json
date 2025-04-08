@@ -1,0 +1,60 @@
+{
+  "type": "IntentMaxHistoryTrackerFeaturizer",
+  "state_featurizer": {
+    "action_texts": [],
+    "entity_tag_specs": [],
+    "feature_states": {
+      "intent": {
+        "affirm": 0,
+        "ask_time": 1,
+        "ask_weather": 2,
+        "back": 3,
+        "deny": 4,
+        "goodbye": 5,
+        "greet": 6,
+        "inform": 7,
+        "mood_analysis": 8,
+        "nlu_fallback": 9,
+        "out_of_scope": 10,
+        "restart": 11,
+        "session_start": 12,
+        "tell_joke": 13
+      },
+      "action_name": {
+        "action_listen": 0,
+        "action_restart": 1,
+        "action_session_start": 2,
+        "action_default_fallback": 3,
+        "action_deactivate_loop": 4,
+        "action_revert_fallback_events": 5,
+        "action_default_ask_affirmation": 6,
+        "action_default_ask_rephrase": 7,
+        "action_two_stage_fallback": 8,
+        "action_unlikely_intent": 9,
+        "action_back": 10,
+        "...": 11,
+        "action_extract_slots": 12,
+        "action_get_weather": 13,
+        "action_get_time": 14,
+        "action_tell_joke": 15,
+        "action_analyze_mood": 16,
+        "utter_ask_city": 17,
+        "utter_ask_mood": 18,
+        "utter_default": 19,
+        "utter_goodbye": 20,
+        "utter_greet": 21,
+        "utter_no_api_key": 22
+      },
+      "entities": {
+        "city": 0,
+        "mood": 1
+      },
+      "slots": {
+        "city_0": 0
+      },
+      "active_loop": {}
+    }
+  },
+  "remove_duplicates": true,
+  "max_history": 5
+}

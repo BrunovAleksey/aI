@@ -1,0 +1,12 @@
+{
+  "0": "affirm",
+  "1": "ask_time",
+  "2": "ask_weather",
+  "3": "deny",
+  "4": "goodbye",
+  "5": "greet",
+  "6": "inform",
+  "7": "informs",
+  "8": "mood_analysis",
+  "9": "tell_joke"
+}

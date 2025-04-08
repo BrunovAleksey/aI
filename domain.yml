@@ -1,0 +1,56 @@
+version: "3.1"
+
+intents:
+  - greet
+  - goodbye
+  - ask_weather
+  - ask_time
+  - tell_joke
+  - mood_analysis
+  - affirm
+  - deny
+  - inform
+  - informs
+
+
+responses:
+  utter_greet:
+    - text: "Привет! Я могу рассказать погоду, сказать время, рассказать анекдот или определить твое настроение. Чем могу помочь?"
+  utter_goodbye:
+    - text: "До свидания! Возвращайся, если понадоблюсь."
+    - text: "Пока! Хорошего дня!"
+  utter_ask_city:
+    - text: "Для показа погоды мне нужно знать город. В каком городе проверить погоду?"
+  utter_no_api_key:
+    - text: "Извините, сервис погоды временно недоступен."
+  utter_ask_mood:
+    - text: "Расскажи, как у тебя дела или что произошло сегодня, и я попробую определить твое настроение."
+  utter_default:
+    - text: "Извините, я не совсем понял. Могу ли я помочь чем-то еще?"
+
+entities:
+  - city
+  - mood
+
+slots:
+  city:
+    type: text
+    influence_conversation: true
+    mappings:
+    - type: from_entity
+      entity: city
+  mood:
+    type: text
+    influence_conversation: false
+    mappings:
+    - type: from_text
+
+actions:
+  - action_get_weather
+  - action_get_time
+  - action_tell_joke
+  - action_analyze_mood
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
