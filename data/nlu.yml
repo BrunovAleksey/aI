@@ -96,3 +96,31 @@ nlu:
     - чувствую себя уставшим
     - мне грустно
     - я счастлив!
+
+
+- intent: set_name
+  examples: |
+    - меня зовут [Иван](username)
+    - я [картошка](username)
+    - зови меня [хозяин](username)
+    - мое имя [Дима](username)
+    - [Максим](username)
+
+- intent: inform_hobby
+  examples: |
+    - Увлекаюсь [рисованием](hobbies)
+    - Люблю [фотографировать](hobbies)
+    - Мое хобби [программирование](hobbies)
+    - [Готовка](hobbies) - это мое
+    - Обожаю [путешествовать](hobbies)
+
+- intent: ask_name
+  examples: |
+    - как меня зовут?
+    - какое у меня имя?
+    - скажи мое имя
+
+- intent: ask_hobby
+  examples: |
+    - какое у меня хобби?
+    - скажи мое хобби

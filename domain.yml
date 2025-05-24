@@ -11,6 +11,10 @@ intents:
   - deny
   - inform
   - informs
+  - set_name
+  - ask_name
+  - ask_hobby
+  - inform_hobby
 
 
 
@@ -20,37 +24,66 @@ responses:
   utter_goodbye:
     - text: "До свидания! Возвращайся, если понадоблюсь."
     - text: "Пока! Хорошего дня!"
-  utter_ask_city:
-    - text: "Для показа погоды мне нужно знать город. В каком городе проверить погоду?"
   utter_no_api_key:
     - text: "Извините, сервис погоды временно недоступен."
   utter_ask_mood:
     - text: "Расскажи, как у тебя дела или что произошло сегодня, и я попробую определить твое настроение."
   utter_default:
     - text: "Извините, я не совсем понял. Могу ли я помочь чем-то еще?"
+  utter_confirm_name:
+    - text: "Приятно познакомиться, {username}!"
+  utter_confirm_hobbies:
+    - text: "Хорошо! Теперь я знаю, что вы любите {hobbies}!"
+  utter_ask_name:
+    - text: "Тебя зовут {username}!"
+  utter_ask_hobby:
+    - text: "Твоё хобби {hobbies}!"
 
 entities:
   - city
   - mood
+  - username
+  - hobbies
+
 
 slots:
+
   city:
     type: text
-    influence_conversation: true
     mappings:
-    - type: from_entity
-      entity: city
+      - type: from_entity
+        entity: city
+
   mood:
     type: text
     influence_conversation: false
     mappings:
     - type: from_text
 
+  username:
+    type: text
+    mappings:
+      - type: from_entity
+        entity: username
+        intent: set_name
+
+  hobbies:
+    type: text
+    initial_value: null
+    mappings:
+      - type: from_entity
+        entity: hobbies
+        intent: inform_hobby
+
+
 actions:
   - action_get_weather
   - action_get_time
   - action_tell_joke
   - action_analyze_mood
+  - action_save_user_memory
+  - action_load_user_memory
+
 
 session_config:
   session_expiration_time: 60

@@ -44,3 +44,26 @@ rules:
   steps:
   - intent: informs
   - action: action_analyze_mood
+
+- rule: Сохранение имени пользователя
+  steps:
+    - intent: set_name
+    - action: action_save_user_memory
+    - action: utter_confirm_name
+
+- rule: Сохранение хобби
+  steps:
+    - intent: inform_hobby
+    - action: action_save_user_memory
+    - action: utter_confirm_hobbies
+
+- rule: Ответ на вопрос об имени
+  steps:
+    - intent: ask_name
+    - action: utter_ask_name
+
+- rule: Ответ на вопрос об хобби
+  steps:
+    - intent: ask_hobby
+    - action: utter_ask_hobby
+
