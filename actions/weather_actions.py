@@ -17,7 +17,7 @@ class ActionGetWeather(Action):
             dispatcher.utter_message(text="Не могу определить город для проверки погоды.")
             return []
 
-        api_key = "64240a2d35ef1acd0374d6f6f530739d"
+        api_key = "xx"
 
         try:
             base_url = f"http://api.openweathermap.org/data/2.5/weather?q={city}&appid={api_key}&units=metric&lang=ru"
